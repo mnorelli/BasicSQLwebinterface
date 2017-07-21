@@ -7,6 +7,9 @@ Practice using user interactions with a web page to CRUD in an SQL database.  Wo
 [Installation of PostGres from Lynda](https://www.lynda.com/PostgreSQL-tutorials/Getting-most-out-Quick-Start/73930/93124-4.html).
 GA lessons on SQL.
 
+*** Remake schema: name,network,street address,wifi pwd, bathroom code,note
+
+
 ### Tech
 - Node.js
 - Bootstrap CSS
