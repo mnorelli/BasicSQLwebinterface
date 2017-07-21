@@ -17,10 +17,19 @@ Using d3 [http://yosiasz/d3-node-express-postgresql]()
 ### Fun steps
 [Create a GitHub repo from CLI](https://stackoverflow.com/questions/2423777/is-it-possible-to-create-a-remote-repo-on-github-from-the-cli-without-opening-br)
 
+### Schema
+Use as example data the list of local wifi cafes and passwords
+
+
 ### Notes
 psql:
 
+- ```\q``` exit repl
 - ```\l``` list databases
 - ```\c``` connect to a database
 - ```\d``` list relations (table, view, index, sequence, or foreign table)
+- ```\i filename``` run contents of ```filename``` as if its contents were typed into the command line
+
+*don't forget* after all commands, add ```;```
+
 
