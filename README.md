@@ -1,17 +1,17 @@
 #Using Web Interface to Do Basic SQL Interaction
 
-###Goal 
+### Goal 
 Practice using user interactions with a web page to CRUD in an SQL database.  Work to host this on mnorelli.com.  Include map via CARTO?
 
-###Process
+### Process
 Started with SQL installation of PostGres from Lynda.
 GA lessons on SQL
 
-###Tech
+### Tech
 Node.js
 Bootstrap CSS
 
-###Examples
+### Examples
 Using d3 [http://yosiasz/d3-node-express-postgresql]()
 
 ### Fun steps
