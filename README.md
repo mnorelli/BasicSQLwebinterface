@@ -20,6 +20,7 @@ Using d3 [http://yosiasz/d3-node-express-postgresql]()
 ### Schema
 Use as example data the list of local wifi cafes and passwords
 
+[Schema design at draw.io](https://www.draw.io/#G0B3r-2ApUW3VzbVl0NFlHQUNRRkk)
 
 ### Notes
 psql:
