@@ -35,14 +35,10 @@ psql:
 
 ### Process
 - [ ] In local PostgreSQL, set up database, tables, and data.
-- [ ] sdsd
--  [x] sdsd
-
-Try hosting the database online.
-
-Make a simple JS web app to CRUD records.
-Test with hard-coded data.
-Test with hosted data.
+- [ ] Try hosting the database online.
+- [ ] Make a simple JS web app to CRUD records.
+- [ ] Test with hard-coded data.
+- [ ] Test with hosted data.
 Publish.
 
 
