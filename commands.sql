@@ -1,3 +1,5 @@
+\c mnorelli
+
 DROP DATABASE IF EXISTS cafewifi;
 
 CREATE DATABASE cafewifi;
@@ -6,21 +8,32 @@ CREATE DATABASE cafewifi;
 
 \c cafewifi
 
-DROP TABLE IF EXISTS password, address;
+DROP TABLE IF EXISTS site, address;
 
-CREATE TABLE password (
+CREATE TABLE site (
 ID INT PRIMARY KEY NOT NULL,
-CAFENAME TEXT NOT NULL,
-NETWORK TEXT NOT NULL,
+NAME TEXT NOT NULL,
+ADDRESS TEXT,
+NETWORK TEXT,
 PASSWORD CHAR(50),
+NOTE TEXT,
+BATHRMCODE TEXT,
 UPDATED DATE
 );
 
-
 CREATE TABLE address (
 ID INT PRIMARY KEY NOT NULL,
-CAFENAME TEXT NOT NULL,
+NAME TEXT NOT NULL,
 ADDRESS TEXT NOT NULL
 );
 
 \d
+
+COPY site (id, name, address, network, password, note, bathrmcode) 
+FROM '/Users/mnorelli/dev/xxBasicSQLinterface/data2load.csv'
+csv
+NULL AS ''
+;
+
+
+
