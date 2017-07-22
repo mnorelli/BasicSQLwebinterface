@@ -18,6 +18,9 @@ Using d3 [http://yosiasz/d3-node-express-postgresql]()
 ### Fun steps
 [Create a GitHub repo from CLI](https://stackoverflow.com/questions/2423777/is-it-possible-to-create-a-remote-repo-on-github-from-the-cli-without-opening-br)
 
+After putting in multiple cursors  (⌘A, then Shift-⌘L, then left arrow), [Sublime Text Increment Selection](https://github.com/yulanggong/IncrementSelection) is magic!
+
+
 ### Schema
 Use as example data the list of local wifi cafes and passwords
 
@@ -35,7 +38,7 @@ psql:
 *don't forget* after all commands, add ```;```
 
 ### Process
-- [ ] In local PostgreSQL, set up database, tables, and data.
+- [x] In local PostgreSQL, set up database, tables, and data.
 - [ ] Try hosting the database online.
 - [ ] Make a simple JS web app to CRUD records.
 - [ ] Test with hard-coded data.
