@@ -35,5 +35,14 @@ csv
 NULL AS ''
 ;
 
+# add GIS points
+ALTER TABLE site (
+  geoid SERIAL,
+  geom GEOMETRY(Point, 26910),
+  name VARCHAR(128)
+);
 
+CREATE INDEX site_gix
+  ON site 
+  USING GIST (geom); 
 
