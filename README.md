@@ -13,7 +13,7 @@ GA lessons on SQL.
 - Bootstrap CSS
 
 ### Examples
-Using d3 [http://yosiasz/d3-node-express-postgresql]()
+Using d3 [http://github.com/yosiasz/d3-node-express-postgresql]()
 
 ### Fun steps
 [Create a GitHub repo from CLI](https://stackoverflow.com/questions/2423777/is-it-possible-to-create-a-remote-repo-on-github-from-the-cli-without-opening-br)
@@ -39,7 +39,7 @@ psql:
 
 ### Process
 - [x] In local PostgreSQL, set up database, tables, and data.
-- [ ] Try hosting the database online.
+- [x] Try hosting the database online.
 - [ ] Make a simple JS web app to CRUD records.
 - [ ] Test with hard-coded data.
 - [ ] Test with hosted data.

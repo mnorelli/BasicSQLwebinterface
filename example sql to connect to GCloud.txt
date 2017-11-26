@@ -1,0 +1,72 @@
+https://ssh.cloud.google.com/projects/cafewifi-183701/zones/us-west1-a/instances/postgres?authuser=0&hl=en_US&projectNumber=265063489369
+or in Terminal:
+gcloud compute --project "cafewifi-183701" ssh --zone "us-west1-a" "postgres"
+
+
+# psql -U myDatabaseUsername --password -d myDatabaseName -f mySqlScript.sql -h myHostName
+
+sudo -s
+sudo -u postgres psql postgres
+
+psql -U username -d mydatabase -c 'SELECT * FROM mytable'
+
+psql -U myDatabaseUsername --password -d myDatabaseName -f mySqlScript.sql -h myHostName
+
+sudo -u postgres psql -U postgres -f commands.sql
+
+copy "ABC"."def" from E'C:\\tmp\\blabla.csv' delimiters ',' CSV HEADER;
+
+# list local directory contents
+
+DROP TABLE IF EXISTS files;
+CREATE TABLE files(filename text);
+COPY files FROM PROGRAM 'find /home/mnorelli -maxdepth 1 -type f -printf "%f\n"'; 
+SELECT * FROM files ORDER BY filename ASC;
+
+
+# edit commands.sql for GCloud version
+
+COPY site (id, name, address, network, password, note, bathrmcode) 
+FROM '/home/mnorelli360/BasicSQLwebinterface/data2load.csv'
+csv
+NULL AS ''
+;
+
+# show columns in table
+
+SELECT *
+FROM information_schema.columns
+WHERE table_schema = 'public'
+  AND table_name   = 'site'
+;
+
+
+ALTER TABLE site ADD 
+  geom GEOMETRY(Point, 26910),
+  name VARCHAR(128)
+;
+
+# oops.  need PostGIS
+
+curl -O http://download.osgeo.org/postgis/source/postgis-2.3.5.tar.gz
+tar xvfz postgis-2.3.5.tar.gz
+cd postgis-2.3.5
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential
+
+./configure
+
+# uh oh
+You need to install postgresql-server-dev-X.Y for building a server-side extension or libpq-dev for building a client-side application.
+configure: error: the PGXS Makefile  cannot be found. Please install the PostgreSQL server development packages and re-run configure.
+
+https://stackoverflow.com/questions/26134991/error-please-install-the-postgresql-server-development-packages-and-re-run-conf
+
+"you should just be installing PostGIS from packages, rather than from source"
+
+# as root
+
+sudo apt-get install postgresql-9.3-postgis-2.1 postgresql-contrib-9.3 postgresql-9.3-postgis-scripts
+

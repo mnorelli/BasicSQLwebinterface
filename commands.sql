@@ -1,4 +1,4 @@
-\c mnorelli
+#\c mnorelli
 
 DROP DATABASE IF EXISTS cafewifi;
 
@@ -35,8 +35,7 @@ csv
 NULL AS ''
 ;
 
-# add GIS points
-ALTER TABLE site (
+ALTER TABLE site ADD (
   geoid SERIAL,
   geom GEOMETRY(Point, 26910),
   name VARCHAR(128)
