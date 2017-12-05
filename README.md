@@ -82,3 +82,5 @@ or
 
 #### Getting local files to cloud
 [Transferring Files to Instances](https://cloud.google.com/compute/docs/instances/transfer-files)
+
+bin/gcloud compute scp postgres:/home/mnorelli360/BasicSQLwebinterface ../xxBasicSQLinterface/pg_hba.conf
