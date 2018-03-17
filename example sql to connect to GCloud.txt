@@ -75,6 +75,7 @@ sudo apt-get install postgresql-9.3-postgis-2.1 postgresql-contrib-9.3 postgresq
 # set up postgres for remote access per https://cloud.google.com/community/tutorials/setting-up-postgres
 # firewall rule "cafewifi"  
 # may need to edit IP address on ../../etc/postgresql/9.3/main/pg_hba.conf each time I move wifi locations...
+# now pgAdmin can't connect: ""
 
 
 
