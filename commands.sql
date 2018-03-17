@@ -35,11 +35,9 @@ csv
 NULL AS ''
 ;
 
-ALTER TABLE site ADD (
-  geoid SERIAL,
-  geom GEOMETRY(Point, 26910),
-  name VARCHAR(128)
-);
+ALTER TABLE site ADD geoid SERIAL;
+ALTER TABLE site ADD geom GEOMETRY(Point, 26910);
+ALTER TABLE site ADD name VARCHAR(128);
 
 CREATE INDEX site_gix
   ON site 

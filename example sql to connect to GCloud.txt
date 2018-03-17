@@ -1,6 +1,8 @@
 https://ssh.cloud.google.com/projects/cafewifi-183701/zones/us-west1-a/instances/postgres?authuser=0&hl=en_US&projectNumber=265063489369
 or in Terminal:
-gcloud compute --project "cafewifi-183701" ssh --zone "us-west1-a" "postgres"
+../google-cloud-sdk/bin/gcloud compute --project "cafewifi-183701" ssh --zone "us-west1-a" "postgres"
+
+# see LastPass secure notes Terminal for pwd
 
 
 # psql -U myDatabaseUsername --password -d myDatabaseName -f mySqlScript.sql -h myHostName
@@ -58,7 +60,7 @@ sudo apt-get install build-essential
 
 ./configure
 
-# uh oh
+# ERROR:  type "geometry" does not exist.  uh oh
 You need to install postgresql-server-dev-X.Y for building a server-side extension or libpq-dev for building a client-side application.
 configure: error: the PGXS Makefile  cannot be found. Please install the PostgreSQL server development packages and re-run configure.
 
@@ -69,4 +71,12 @@ https://stackoverflow.com/questions/26134991/error-please-install-the-postgresql
 # as root
 
 sudo apt-get install postgresql-9.3-postgis-2.1 postgresql-contrib-9.3 postgresql-9.3-postgis-scripts
+
+# set up postgres for remote access per https://cloud.google.com/community/tutorials/setting-up-postgres
+# firewall rule "cafewifi"  
+# may need to edit IP address on ../../etc/postgresql/9.3/main/pg_hba.conf each time I move wifi locations...
+
+
+
+
 
